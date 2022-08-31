@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science Portfolio on ANGGA FUADY</title>
+    <link>https://fuady.github.io/</link>
+    <description>Recent content in Data Science Portfolio on ANGGA FUADY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Apr 2022 11:25:05 -0400</lastBuildDate><atom:link href="https://fuady.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R: Exploratory data analysis EPL in FIFA20</title>
+      <link>https://fuady.github.io/post/fifa20/</link>
+      <pubDate>Thu, 14 Apr 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/post/fifa20/</guid>
+      <description>Highlights Objectives Overview of average age, value, overall skills and potential for each club Most valuable player for each position Visualize player comparison Outcome Man. City is the club with the highest value and Potential Wolves has the youngest squad in this season Chelsea leads the highest average overall player skills Kevin de Bruyne is the most valuable player of the season De Bruyne outperform Pogba in the attacking, movement and mentality Alisson has a higher positioning and kicking value compare to De Gea This post will explore data of players and clubs in the premier league season 2019/2020 from FIFA20 video games.</description>
+    </item>
+    
+    <item>
+      <title>Python: Shot on goal visualization</title>
+      <link>https://fuady.github.io/post/shot_on_goal/</link>
+      <pubDate>Mon, 11 Apr 2022 11:13:32 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/post/shot_on_goal/</guid>
+      <description>Highlights Objectives Web scraping of shot on goal in single match Show pitch visualization including shots coordinate Shows timing match Outcome Visualization of shot on goal location and its Outcome Visualization of timing match (minutes vs cumulative expected goal) In this project, we are interested in replication of shot on goal visualization and timing chart of EPL match between Liverpool and Wolverhampton Wanderers on May 22, 2022. Liverpool wins 3-1 against the opponent.</description>
+    </item>
+    
+    <item>
+      <title>Tableau: Offline Retail Dashboard</title>
+      <link>https://fuady.github.io/post/walmart_dashboard/</link>
+      <pubDate>Sat, 09 Apr 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/post/walmart_dashboard/</guid>
+      <description>Highlights Objectives Shows the profit trends over time Shows the average profit per state Shows the average profit per region over time Outcome The average profit for all states is USD 181.18 South Dakota has the highest average profit, while Montana has the lowest. Only in Central region, the average profit is higher in 2015 compare to in 2012 In 4th quarter of 2012, East region has the highest average profit Retail Dashboard Visualization process In this project, I use Tableau for building the dashboard.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://fuady.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fuady.github.io/about/</guid>
+      <description>My name is Angga Fuady. I studied mathematics in Bachelor and Master degree (ITB, Indonesia) and continuing a PhD in the field of statistics (LUMC, The Netherlands). Having a solid analytical background and curiosity give me the energy to find the &amp;lsquo;aha&amp;rsquo; moment and valuable insight from the data. To extract some insights, I used mostly visualization as well as machine learning technique. For my daily work, I prefer to use R and Python.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://fuady.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fuady.github.io/contact/</guid>
+      <description>LinkedIn | Github | Email</description>
+    </item>
+    
+  </channel>
+</rss>

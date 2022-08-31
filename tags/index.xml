@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on ANGGA FUADY</title>
+    <link>https://fuady.github.io/tags/</link>
+    <description>Recent content in Tags on ANGGA FUADY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Apr 2022 11:25:05 -0400</lastBuildDate><atom:link href="https://fuady.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EDA</title>
+      <link>https://fuady.github.io/tags/eda/</link>
+      <pubDate>Thu, 14 Apr 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/tags/eda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://fuady.github.io/tags/r/</link>
+      <pubDate>Thu, 14 Apr 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://fuady.github.io/tags/python/</link>
+      <pubDate>Mon, 11 Apr 2022 11:13:32 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>https://fuady.github.io/tags/visualization/</link>
+      <pubDate>Mon, 11 Apr 2022 11:13:32 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/tags/visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tableau</title>
+      <link>https://fuady.github.io/tags/tableau/</link>
+      <pubDate>Sat, 09 Apr 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/tags/tableau/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

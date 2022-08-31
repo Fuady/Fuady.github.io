@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EDA on ANGGA FUADY</title>
+    <link>https://fuady.github.io/tags/eda/</link>
+    <description>Recent content in EDA on ANGGA FUADY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Apr 2022 11:25:05 -0400</lastBuildDate><atom:link href="https://fuady.github.io/tags/eda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R: Exploratory data analysis EPL in FIFA20</title>
+      <link>https://fuady.github.io/post/fifa20/</link>
+      <pubDate>Thu, 14 Apr 2022 11:25:05 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/post/fifa20/</guid>
+      <description>Highlights Objectives Overview of average age, value, overall skills and potential for each club Most valuable player for each position Visualize player comparison Outcome Man. City is the club with the highest value and Potential Wolves has the youngest squad in this season Chelsea leads the highest average overall player skills Kevin de Bruyne is the most valuable player of the season De Bruyne outperform Pogba in the attacking, movement and mentality Alisson has a higher positioning and kicking value compare to De Gea This post will explore data of players and clubs in the premier league season 2019/2020 from FIFA20 video games.</description>
+    </item>
+    
+  </channel>
+</rss>

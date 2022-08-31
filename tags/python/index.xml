@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on ANGGA FUADY</title>
+    <link>https://fuady.github.io/tags/python/</link>
+    <description>Recent content in Python on ANGGA FUADY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Apr 2022 11:13:32 -0400</lastBuildDate><atom:link href="https://fuady.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python: Shot on goal visualization</title>
+      <link>https://fuady.github.io/post/shot_on_goal/</link>
+      <pubDate>Mon, 11 Apr 2022 11:13:32 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/post/shot_on_goal/</guid>
+      <description>Highlights Objectives Web scraping of shot on goal in single match Show pitch visualization including shots coordinate Shows timing match Outcome Visualization of shot on goal location and its Outcome Visualization of timing match (minutes vs cumulative expected goal) In this project, we are interested in replication of shot on goal visualization and timing chart of EPL match between Liverpool and Wolverhampton Wanderers on May 22, 2022. Liverpool wins 3-1 against the opponent.</description>
+    </item>
+    
+  </channel>
+</rss>
