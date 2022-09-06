@@ -6,11 +6,20 @@
     <description>Recent content in Python on ANGGA FUADY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Apr 2022 11:13:32 -0400</lastBuildDate><atom:link href="https://fuady.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Aug 2021 11:13:32 -0400</lastBuildDate><atom:link href="https://fuady.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python: Car insurance fraud predictions</title>
+      <link>https://fuady.github.io/post/insurance_fraud/</link>
+      <pubDate>Tue, 03 Aug 2021 11:13:32 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/post/insurance_fraud/</guid>
+      <description>Highlights Objectives Investigate variables with the highest fraud Fit prediction model for fraud prediction Determine the influential variable for prediction Outcome Car incidents mostly happens in the afternoon at 17.00 Insured with Mercedes, Ford, and Audi often commit fraud Two most influential variable for insurance car fraud prediction are vehicle claim and incident severity Prediction using decision tree model gives the largest accuracy (83%) Data set The data can be downloaded is here.</description>
+    </item>
+    
     <item>
       <title>Python: Shot on goal visualization</title>
       <link>https://fuady.github.io/post/shot_on_goal/</link>
-      <pubDate>Mon, 11 Apr 2022 11:13:32 -0400</pubDate>
+      <pubDate>Fri, 30 Jul 2021 11:13:32 -0400</pubDate>
       
       <guid>https://fuady.github.io/post/shot_on_goal/</guid>
       <description>Highlights Objectives Web scraping of shot on goal in single match Show pitch visualization including shots coordinate Shows timing match Outcome Visualization of shot on goal location and its Outcome Visualization of timing match (minutes vs cumulative expected goal) In this project, we are interested in replication of shot on goal visualization and timing chart of EPL match between Liverpool and Wolverhampton Wanderers on May 22, 2022. Liverpool wins 3-1 against the opponent.</description>

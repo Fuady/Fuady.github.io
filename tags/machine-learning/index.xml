@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on ANGGA FUADY</title>
+    <link>https://fuady.github.io/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on ANGGA FUADY</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Aug 2021 11:13:32 -0400</lastBuildDate><atom:link href="https://fuady.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python: Car insurance fraud predictions</title>
+      <link>https://fuady.github.io/post/insurance_fraud/</link>
+      <pubDate>Tue, 03 Aug 2021 11:13:32 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/post/insurance_fraud/</guid>
+      <description>Highlights Objectives Investigate variables with the highest fraud Fit prediction model for fraud prediction Determine the influential variable for prediction Outcome Car incidents mostly happens in the afternoon at 17.00 Insured with Mercedes, Ford, and Audi often commit fraud Two most influential variable for insurance car fraud prediction are vehicle claim and incident severity Prediction using decision tree model gives the largest accuracy (83%) Data set The data can be downloaded is here.</description>
+    </item>
+    
+  </channel>
+</rss>

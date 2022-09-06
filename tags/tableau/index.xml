@@ -6,11 +6,21 @@
     <description>Recent content in Tableau on ANGGA FUADY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Apr 2022 10:58:08 -0400</lastBuildDate><atom:link href="https://fuady.github.io/tags/tableau/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Aug 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://fuady.github.io/tags/tableau/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tableau: World Life Expectancy Dashboard</title>
+      <link>https://fuady.github.io/post/life_expectancy_dashboard/</link>
+      <pubDate>Tue, 17 Aug 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://fuady.github.io/post/life_expectancy_dashboard/</guid>
+      <description>Highlights Objectives Shows female and male life expectancy for each country over time Compute the average life expectancy for each continent Outcome World life expectancy Dashboard Overview Life expectancy is the key metric for assessing population health. It tells us the average age of death in a population.
+Life expectancy has increased rapidly since the Age of Enlightenment. In the early 19th century, life expectancy started to increase in the early industrialized countries while it stayed low in the rest of the world.</description>
+    </item>
+    
     <item>
       <title>Tableau: Offline Retail Dashboard</title>
       <link>https://fuady.github.io/post/walmart_dashboard/</link>
-      <pubDate>Sat, 09 Apr 2022 10:58:08 -0400</pubDate>
+      <pubDate>Tue, 20 Jul 2021 10:58:08 -0400</pubDate>
       
       <guid>https://fuady.github.io/post/walmart_dashboard/</guid>
       <description>Highlights Objectives Shows the profit trends over time Shows the average profit per state Shows the average profit per region over time Outcome The average profit for all states is USD 181.18 South Dakota has the highest average profit, while Montana has the lowest. Only in Central region, the average profit is higher in 2015 compare to in 2012 In 4th quarter of 2012, East region has the highest average profit Retail Dashboard Visualization process In this project, I use Tableau for building the dashboard.</description>

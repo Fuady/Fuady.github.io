@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Python: Car insurance fraud predictions | ANGGA FUADY</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Highlights Objectives Investigate variables with the highest fraud Fit prediction model for fraud prediction Determine the influential variable for prediction Outcome Car incidents mostly happens in the afternoon at 17.00 Insured with Mercedes, Ford, and Audi often commit fraud Two most influential variable for insurance car fraud prediction are vehicle claim and incident severity Prediction using decision tree model gives the largest accuracy (83%) Data set The data can be downloaded is here.">
+    <meta name="generator" content="Hugo 0.101.0" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://fuady.github.io/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+<link rel="shortcut icon" href="https://fuady.github.io/images/icon.png" type="image/x-icon" />
+
+
+    
+
+    
+    
+    <meta property="og:title" content="Python: Car insurance fraud predictions" />
+<meta property="og:description" content="Highlights Objectives Investigate variables with the highest fraud Fit prediction model for fraud prediction Determine the influential variable for prediction Outcome Car incidents mostly happens in the afternoon at 17.00 Insured with Mercedes, Ford, and Audi often commit fraud Two most influential variable for insurance car fraud prediction are vehicle claim and incident severity Prediction using decision tree model gives the largest accuracy (83%) Data set The data can be downloaded is here." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fuady.github.io/post/insurance_fraud/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-08-03T11:13:32-04:00" />
+<meta property="article:modified_time" content="2021-08-03T11:13:32-04:00" /><meta property="og:site_name" content="ANGGA FUADY" />
+
+<meta itemprop="name" content="Python: Car insurance fraud predictions">
+<meta itemprop="description" content="Highlights Objectives Investigate variables with the highest fraud Fit prediction model for fraud prediction Determine the influential variable for prediction Outcome Car incidents mostly happens in the afternoon at 17.00 Insured with Mercedes, Ford, and Audi often commit fraud Two most influential variable for insurance car fraud prediction are vehicle claim and incident severity Prediction using decision tree model gives the largest accuracy (83%) Data set The data can be downloaded is here."><meta itemprop="datePublished" content="2021-08-03T11:13:32-04:00" />
+<meta itemprop="dateModified" content="2021-08-03T11:13:32-04:00" />
+<meta itemprop="wordCount" content="585">
+<meta itemprop="keywords" content="Python,Machine Learning," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python: Car insurance fraud predictions"/>
+<meta name="twitter:description" content="Highlights Objectives Investigate variables with the highest fraud Fit prediction model for fraud prediction Determine the influential variable for prediction Outcome Car incidents mostly happens in the afternoon at 17.00 Insured with Mercedes, Ford, and Audi often commit fraud Two most influential variable for insurance car fraud prediction are vehicle claim and incident severity Prediction using decision tree model gives the largest accuracy (83%) Data set The data can be downloaded is here."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://fuady.github.io/images/insurance.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://fuady.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        ANGGA FUADY
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://fuady.github.io/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://fuady.github.io/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://fuady.github.io/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://github.com/Fuady" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/amfuady/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Python: Car insurance fraud predictions</h1>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://fuady.github.io/post/insurance_fraud/&amp;title=Python:%20Car%20insurance%20fraud%20predictions" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Python: Car insurance fraud predictions</h1>
+      
+      <p class="tracked">
+        By <strong>Angga</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-08-03T11:13:32-04:00">August 3, 2021</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="highlights">Highlights</h2>
+<ul>
+<li><strong>Objectives</strong>
+<ul>
+<li>Investigate variables with the highest fraud</li>
+<li>Fit prediction model for fraud prediction</li>
+<li>Determine the influential variable for prediction</li>
+</ul>
+</li>
+<li><strong>Outcome</strong>
+<ul>
+<li>Car incidents mostly happens in the afternoon at 17.00</li>
+<li>Insured with Mercedes, Ford, and Audi often commit fraud</li>
+<li>Two most influential variable for insurance car fraud prediction are vehicle claim and incident severity</li>
+<li>Prediction using decision tree model gives the largest accuracy (83%)</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-set">Data set</h2>
+<p>The data can be downloaded is <a href="https://www.kaggle.com/datasets/buntyshah/auto-insurance-claims-data">here</a>.</p>
+<h2 id="exploratory-data-analysis">Exploratory data Analysis</h2>
+<h3 id="correlation-matrix-between-each-variables">Correlation matrix between each variables</h3>
+<p>In this section, I want to know the correlation between each variables. To generate the plot, the following code was used:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># Heatmap correlation plot for all variables</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize <span style="color:#f92672">=</span> (<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">12</span>))
+</span></span><span style="display:flex;"><span>corr <span style="color:#f92672">=</span> main_df<span style="color:#f92672">.</span>corr()
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>heatmap(data <span style="color:#f92672">=</span> corr,  annot <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>, fmt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;.1g&#39;</span>, linewidth <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p>Results of correlation plot is as follows
+<img src="https://fuady.github.io/images/insurance_corplot.png" alt=""><br>
+From the plot we see that the total months insured is highly correlated with age of the insured client. Also, the total claim amount is highly correlated with the injury claim, property claim and vehicle claim. This is because the total claim is just the summation of those three claims. Later in the analysis, the age and the total claim were excluded from the prediction model.</p>
+<p>Next, we are looking into some variables in details. First, the distribution of some continuous variables is shown in this figure below</p>
+<p><img src="https://fuady.github.io/images/insurance_dist.png" alt=""></p>
+<p>From this plot, the amount of vehicle claim is much larger than the injury or property claim. In general, the vehicle claim is larger twice or more from the annual premium. Most of the incident are single collision, which can be seen from the <code>number_of_vehicle_involved</code> variable. Most of the clients has been insured for about 200 months.</p>
+<p>Now, some of the categorical variables are investigate, I look into how much percentage for each variable that commit fraud.
+First, we look into car manufacturer, which car that mostly commit fraud. To investigate that, I plot the following figure</p>
+<p><img src="https://fuady.github.io/images/insurance_auto_make.png" alt=""></p>
+<p>I also compute the percentage of fraud within the car manufacturer. It turns out that client with three car&rsquo;s manufacturer, namely Mercedes, Audi and Ford commits fraud for more than 30%.</p>
+<p>Next, the incident severity to see which damage that contribute more into fraud detection.
+<img src="https://fuady.github.io/images/insurance_incident_severity.png" alt=""></p>
+<p>From the barplot above, it can be clearly seen that most of the major damage incident is fraud. The percentage of fraud in the major damage incident is 61%.</p>
+<h2 id="fraud-predictions">Fraud predictions</h2>
+<p>We fit 6 machine learning algorithm to the data set to see which algorithm that gives the highest accuracy. The algorithms are Random forest, Support vector machine, K-nearest neighbors,  Decision tree, Gradient Boosting, and Stochastic gradient boosting. Before implementing the algorithm, data was split into training and test set, with the 25% of data is in the test set.</p>
+<p>The summary results of each method are presented in this table:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Model</strong></th>
+<th style="text-align:right"><strong>Accuracy</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SGB</td>
+<td style="text-align:right">0.812</td>
+</tr>
+<tr>
+<td>Decision Tree</td>
+<td style="text-align:right">0.788</td>
+</tr>
+<tr>
+<td>Gradient Boost</td>
+<td style="text-align:right">0.780</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td style="text-align:right">0.740</td>
+</tr>
+<tr>
+<td>SVC</td>
+<td style="text-align:right">0.736</td>
+</tr>
+<tr>
+<td>KNN</td>
+<td style="text-align:right">0.736</td>
+</tr>
+</tbody>
+</table>
+<p>We see that the Stochastic gradient boosting algorithm provides the largest accuracy with about 81%. Next, the importance of each variable is investigated. Kindly see figure below. From this figure, we see incident severity, vehicle claim, and insured hobbies are contributed the most for the fraud predictions.</p>
+<p><img src="https://fuady.github.io/images/insurance_features_imp.png" alt=""></p>
+<h2 id="conclusions">Conclusions</h2>
+<ul>
+<li>Car incidents mostly happens in the afternoon at 17.00</li>
+<li>Insured with Mercedes, Ford, and Audi often commit fraud</li>
+<li>Three most influential variables for insurance car fraud prediction are incident severity, vehicle claim, and insured hobbies.</li>
+<li>Prediction using Stochastic gradient boosting algorithm gives the largest accuracy (81%)</li>
+</ul>
+<p>The full code is available on <a href="https://github.com/Fuady/PortfolioProjects.git">Github</a>.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="https://fuady.github.io/tags/python" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://fuady.github.io/tags/machine-learning" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Machine Learning</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="https://fuady.github.io/post/shot_on_goal/">Python: Shot on goal visualization</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://fuady.github.io/" >
+    &copy;  ANGGA FUADY 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/Fuady" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/amfuady/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
